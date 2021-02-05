@@ -8,7 +8,27 @@
             id:自定义对象的名称,通过id在代码中使用对象
             class:类的全限定名称,不能是接口
     -->
-    <bean id="someServiceImpl" class="cn.clown.service.impl.SomeServiceImpl">
+    <bean id="someServiceImpl" class="cn.clown.service.impl.SomeServiceImpl"/>
+    <bean id="Date" class="java.util.Date"/>
 
+    <bean id="student" class="cn.clown.domain.Student">
+        <property name="name" value="张三"/>
+        <property name="age" value="23"/>
     </bean>
+
+    <bean id="date" class="java.util.Date">
+        <property name="time" value="2021"/>
+    </bean>
+
+    <bean id="school" class="cn.clown.domain.School">
+        <property name="name" value="power-node"/>
+        <property name="address" value="beijing"/>
+    </bean>
+
+    <bean id="student1" class="cn.clown.domain.Student">
+        <property name="name" value="Mr.zhan"/>
+        <property name="age" value="20"/>
+        <property name="school" ref="school"/>
+    </bean>
+
 </beans>
