@@ -12,8 +12,9 @@
     <bean id="Date" class="java.util.Date"/>
 
     <bean id="student" class="cn.clown.domain.Student">
-        <property name="name" value="张三"/>
-        <property name="age" value="23"/>
+        <constructor-arg name="name" value="张三"/>
+        <constructor-arg name="age" value="23"/>
+        <constructor-arg name="school" ref="school"/>
     </bean>
 
     <bean id="date" class="java.util.Date">
@@ -31,4 +32,8 @@
         <property name="school" ref="school"/>
     </bean>
 
+    <bean id="file" class="java.io.File">
+        <constructor-arg name="parent" value="E:\idea_space\Learning-spring\power-node\src\main\resources"/>
+        <constructor-arg name="child" value="applicationContext.xml"/>
+    </bean>
 </beans>

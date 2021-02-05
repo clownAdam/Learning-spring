@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.io.File;
 import java.util.Date;
 
 public class SomeServiceImplTest {
@@ -36,8 +37,11 @@ public class SomeServiceImplTest {
     }
 
     @Test
-    public void test() {
+    public void testFile() {
         System.out.println("test");
+        File file = (File) applicationContext.getBean("file");
+        System.out.println("file.getAbsolutePath() = " + file.getAbsolutePath());
+        System.out.println("file.getName() = " + file.getName());
     }
 
     @Test
