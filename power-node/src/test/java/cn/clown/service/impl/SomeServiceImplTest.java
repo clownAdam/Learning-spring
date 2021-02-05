@@ -59,7 +59,7 @@ public class SomeServiceImplTest {
     @Test
     public void testSchool() {
         Student student1 = (Student) applicationContext.getBean("clown1");
-        School school = (School) applicationContext.getBean("school");
+        School school = (School) applicationContext.getBean("school-c");
         System.out.println(student1);
         System.out.println(school);
     }
