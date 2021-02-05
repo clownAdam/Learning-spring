@@ -1,5 +1,7 @@
 package cn.clown.domain;
 
+import java.io.File;
+
 /**
  * <description>学生-实体类</description>
  *
@@ -10,6 +12,17 @@ public class Student {
     private String name;
     private Integer age;
     private School school;
+
+    public Student() {
+        super();
+    }
+
+    public Student(String name, Integer age, School school) {
+        System.out.println("parametric construction method of student");
+        this.name = name;
+        this.age = age;
+        this.school = school;
+    }
 
     public void setName(String name) {
         this.name = name;
