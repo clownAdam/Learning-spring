@@ -58,7 +58,7 @@ public class SomeServiceImplTest {
 
     @Test
     public void testSchool() {
-        Student student1 = (Student) applicationContext.getBean("student1");
+        Student student1 = (Student) applicationContext.getBean("student");
         School school = (School) applicationContext.getBean("school");
         System.out.println(student1);
         System.out.println(school);
