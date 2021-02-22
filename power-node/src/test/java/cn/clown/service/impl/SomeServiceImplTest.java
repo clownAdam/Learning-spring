@@ -64,4 +64,31 @@ public class SomeServiceImplTest {
         System.out.println(school);
     }
 
+    /**
+     * byName方式自动注入
+     */
+    @Test
+    public void test01() {
+        String configLocation = "applicationContext.xml";
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(configLocation);
+        Student myStudent = (Student) applicationContext.getBean("myStudent");
+        System.out.println(myStudent);
+    }
+    /**
+     * byType方式自动注入
+     */
+    @Test
+    public void testbyType() {
+        String configLocation = "applicationContext.xml";
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext(configLocation);
+        Student myStudent = (Student) applicationContext.getBean("myStudent");
+        System.out.println(myStudent);
+    }
+
+    @Test
+    public void test2(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Student demoStudent = (Student) applicationContext.getBean("demoStudent");
+        System.out.println(demoStudent);
+    }
 }

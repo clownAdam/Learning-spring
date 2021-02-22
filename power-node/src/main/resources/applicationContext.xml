@@ -26,6 +26,7 @@
         <property name="address" value="beijing"/>
     </bean>
 
+
     <bean id="student1" class="cn.clown.domain.Student">
         <property name="name" value="Mr.zhan"/>
         <property name="age" value="20"/>
@@ -36,4 +37,17 @@
         <constructor-arg name="parent" value="E:\idea_space\Learning-spring\power-node\src\main\resources"/>
         <constructor-arg name="child" value="applicationContext.xml"/>
     </bean>
+
+    <bean id="myStudent" class="cn.clown.domain.Student" autowire="byName">
+        <property name="name" value="张三"/>
+        <property name="age" value="23"/>
+    </bean>
+
+    <bean id="byTypeStudent" class="cn.clown.domain.Student" autowire="byType">
+        <property name="name" value="张三1"/>
+        <property name="age" value="231"/>
+    </bean>
+
+    <import resource="spring-school.xml"/>
+    <import resource="spring-student.xml"/>
 </beans>
