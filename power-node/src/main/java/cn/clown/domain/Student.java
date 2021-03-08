@@ -1,6 +1,9 @@
 package cn.clown.domain;
 
-import java.io.File;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.Resource;
 
 /**
  * <description>学生-实体类</description>
@@ -8,33 +11,25 @@ import java.io.File;
  * @author clown
  * @date 2021
  */
+@Component("student")
 public class Student {
+    static {
+        System.out.println("hello1");
+    }
+
+    @Value("clown")
     private String name;
+    @Value("23")
     private Integer age;
+
+    /**
+     * TODO:
+     *
+     * @Autowired(required = false)
+     * @Qualifier("school")
+     */
+    @Resource(name = "myschool")
     private School school;
-
-    public Student() {
-        super();
-    }
-
-    public Student(String name, Integer age, School school) {
-        System.out.println("parametric construction method of student");
-        this.name = name;
-        this.age = age;
-        this.school = school;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public void setSchool(School school) {
-        this.school = school;
-    }
 
     @Override
     public String toString() {
