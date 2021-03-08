@@ -10,7 +10,9 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd
 ">
-    <context:component-scan base-package="cn.clown.aspectj"/>
+    <context:component-scan base-package="cn.clown.aspectj,cn.concat.mybatis.service"/>
     <!--声明自动代理生成器，创建代理-->
     <aop:aspectj-autoproxy/>
+    <import resource="sqlSessionFactory.xml"/>
+    <!--<import resource="serviceContext.xml"/>-->
 </beans>
