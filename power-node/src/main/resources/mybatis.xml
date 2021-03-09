@@ -3,10 +3,7 @@
         PUBLIC "-//mybatis.org/DTD Cofnig 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <typeAliases>
-        <package name="cn.concat.mybatis.bean"/>
-    </typeAliases>
     <mappers>
-        <package name="cn.concat.mybatis.dao"/>
+        <package name="cn.concat.mybatis.dao,cn.transaction.sale.dao"/>
     </mappers>
 </configuration>

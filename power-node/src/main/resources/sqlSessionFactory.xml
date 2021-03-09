@@ -11,6 +11,6 @@
     <!--mapper扫描器-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="basePackage" value="cn.concat.mybatis.dao"/>
+        <property name="basePackage" value="cn.transaction.sale.dao,cn.concat.mybatis.dao"/>
     </bean>
 </beans>
